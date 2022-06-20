@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import KeyboardButton from "./components/KeyboardButton";
+import { useSelector, useDispatch } from "react-redux";
 
-function App() {
+const App = () => {
+  const input = useSelector((state) => state.kbState.text);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e)=>addListener(e));
+    return document.removeEventListener("keydown",(e)=>addListener(e))
+  }, []);
+
+  const addListener = (e) => {
+    const value = e.key;
+    console.log(value);
+    //dispatch
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Text: {input}</h1>
+      <KeyboardButton text="A" />
     </div>
   );
-}
+};
 
 export default App;
