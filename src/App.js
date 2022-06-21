@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
 // Custom component imports
-import NavBar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import KeyboardButton from "./components/KeyboardButton";
 
 // Redux imports
@@ -88,8 +88,8 @@ const App = () => {
 
   return (
     <>
-    <NavBar/>
-    <Container>
+    <Navbar/>
+    <Container style={{marginTop:'5%'}}>
       <Form>
         <Form.Group>
           <Form.Control size="lg" style={{backgroundColor:'white'}} readOnly placeholder="Text" as='textarea' value={input} rows={3}/>

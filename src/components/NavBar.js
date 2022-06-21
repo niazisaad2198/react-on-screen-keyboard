@@ -1,7 +1,20 @@
-import React from 'react'
+import NavBar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
-    <div>NavBar</div>
-  )
+    <NavBar bg='dark' variant="dark">
+      <Container>
+        <NavBar.Brand>React On-Screen Keyboard</NavBar.Brand>
+        <Nav>
+          <Nav.Item>
+            <Nav.Link href="https://github.com/niazisaad2198/react-on-screen-keyboard">
+              Github
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </Container>
+    </NavBar>
+  );
 }
