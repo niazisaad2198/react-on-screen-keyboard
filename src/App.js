@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
 // Custom component imports
+import NavBar from "./components/NavBar";
 import KeyboardButton from "./components/KeyboardButton";
 
 // Redux imports
@@ -86,6 +87,8 @@ const App = () => {
   */
 
   return (
+    <>
+    <NavBar/>
     <Container>
       <Form>
         <Form.Group>
@@ -94,6 +97,7 @@ const App = () => {
       </Form>
       <KeyboardButton text="A" />
     </Container>
+    </>
   );
 };
 
