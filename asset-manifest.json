@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-on-screen-keyboard/static/css/main.38be36b0.css",
-    "main.js": "/react-on-screen-keyboard/static/js/main.2101f743.js",
-    "static/js/787.2ca73e01.chunk.js": "/react-on-screen-keyboard/static/js/787.2ca73e01.chunk.js",
-    "index.html": "/react-on-screen-keyboard/index.html",
-    "main.38be36b0.css.map": "/react-on-screen-keyboard/static/css/main.38be36b0.css.map",
-    "main.2101f743.js.map": "/react-on-screen-keyboard/static/js/main.2101f743.js.map",
-    "787.2ca73e01.chunk.js.map": "/react-on-screen-keyboard/static/js/787.2ca73e01.chunk.js.map"
+    "main.css": "./static/css/main.38be36b0.css",
+    "main.js": "./static/js/main.8174effd.js",
+    "static/js/787.2ca73e01.chunk.js": "./static/js/787.2ca73e01.chunk.js",
+    "index.html": "./index.html",
+    "main.38be36b0.css.map": "./static/css/main.38be36b0.css.map",
+    "main.8174effd.js.map": "./static/js/main.8174effd.js.map",
+    "787.2ca73e01.chunk.js.map": "./static/js/787.2ca73e01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38be36b0.css",
-    "static/js/main.2101f743.js"
+    "static/js/main.8174effd.js"
   ]
 }
