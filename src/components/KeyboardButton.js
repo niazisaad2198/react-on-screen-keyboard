@@ -1,20 +1,41 @@
-import { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
-import { updateText } from "../slices/KeyboardSlice";
+import { handleBackSpace, updateText } from "../slices/KeyboardSlice";
 
-
-export default function KeyboardButton({ text }) {
+export default function KeyboardButton({
+  text,
+  styles,
+  value,
+  backSpace = false,
+  special = false,
+  specialFunction,
+}) {
   const isCapsLockOn = useSelector((state) => state.kbState.isCapsLockOn);
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(updateText(text));
+    if (backSpace) {
+      dispatch(handleBackSpace());
+      return;
+    }
+    if (value) {
+      dispatch(updateText(value));
+      return;
+    }
+    dispatch(updateText(isCapsLockOn ? text : text.toLowerCase()));
   };
 
-  return (
-    <Button onClick={handleClick}>
-      {isCapsLockOn? text : text.toLowerCase()}
-    </Button>
-  );
+  if (special) {
+    return (
+      <Button style={styles} onClick={specialFunction?specialFunction:handleClick}>
+        {text}
+      </Button>
+    );
+  } else {
+    return (
+      <Button style={styles} onClick={handleClick}>
+        {isCapsLockOn ? text : text.toLowerCase()}
+      </Button>
+    );
+  }
 }
